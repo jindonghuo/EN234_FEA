@@ -150,7 +150,7 @@ program en234fea
   
    write(6,*) ' Program completed successfully '
 
-  ! stop
+   stop
   
   500 write(6,*) ' Error opening input or output files '
  
