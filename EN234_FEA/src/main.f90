@@ -12,8 +12,8 @@ program en234fea
   Eclipse_root_folder = './'   !  This should work with Eclipse
 
   VS_root_folder = 'C:/Users/Bower/Source/Repos/EN234_FEA/EN234_FEA/'
-  root_directory = VS_root_folder
-    
+  ! root_directory = VS_root_folder
+  root_directory = Eclipse_root_folder
 !
 !   Homework Assignments 2017
 !   You can test the ABAQUS UEL, UMAT and VUMAT codes that you develop for EN234
@@ -126,9 +126,13 @@ program en234fea
 
    infil = trim(root_directory)//trim(infil)
    outfil = trim(root_directory)//trim(outfil)
+
+   write(6,*) ' Before open the infile ', infil, outfil
+
    open (unit = IOR, file = trim(infil), status = 'old', ERR=500)
    open (UNIT = IOW, FILE = trim(outfil), STATUS = 'unknown', ERR=500)
    
+   write(6,*) ' Before read-input-file '
    call read_input_file
   
    if (printinitialmesh) call print_initial_mesh
@@ -146,9 +150,9 @@ program en234fea
   
    write(6,*) ' Program completed successfully '
 
-   stop
+  ! stop
   
-  500 write(6,*) ' Error opening input or output file '
+  500 write(6,*) ' Error opening input or output files '
  
 
   
