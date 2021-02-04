@@ -34,6 +34,7 @@ program en234fea
    infil = 'input_files/Abaqus_uel_linear_elastic_3d.in'
    outfil = 'Output_files/Abaqus_uel_linear_elastic_3d.out'
 
+
 !   Linear elastic plate with a central hole using an ABAQUS UEL
 !   infil = 'input_files/Abaqus_uel_holeplate_3d.in'
 !   outfil = 'Output_files/Abaqus_uel_holeplate_3d.out'
@@ -132,7 +133,6 @@ program en234fea
    open (unit = IOR, file = trim(infil), status = 'old', ERR=500)
    open (UNIT = IOW, FILE = trim(outfil), STATUS = 'unknown', ERR=500)
    
-   write(6,*) ' Before read-input-file '
    call read_input_file
   
    if (printinitialmesh) call print_initial_mesh
@@ -154,8 +154,6 @@ program en234fea
   
   500 write(6,*) ' Error opening input or output files '
  
-
-  
 
   
 end program en234fea
