@@ -154,6 +154,5 @@ program en234fea
   
   500 write(6,*) ' Error opening input or output files '
  
-
   
 end program en234fea
