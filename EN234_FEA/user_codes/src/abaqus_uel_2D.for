@@ -135,11 +135,11 @@
     !     PROPS(2)         Poisson's ratio
 
 
-      if (NNODE == 3) n_points = 1              ! Linear triangle
+      if (NNODE == 3) n_points = 1               ! Linear triangle
       if (NNODE == 4) n_points = 4               ! Linear rectangle
-      if (NNODE == 6) n_points = 4              ! Quadratic triangle
+      if (NNODE == 6) n_points = 4               ! Quadratic triangle
       if (NNODE == 8) n_points = 9               ! Serendipity rectangle
-      if (NNODE == 9) n_points = 9             ! Quadratic rect
+      if (NNODE == 9) n_points = 9               ! Quadratic rect.
 
     ! Write your code for a 2D element below
 
@@ -282,7 +282,6 @@
       return
 
       end subroutine abq_UEL_2D_integrationpoints
-
 
 
 
@@ -443,6 +442,7 @@
       end subroutine abq_UEL_2D_shapefunctions
 
 
+
       subroutine abq_UEL_1D_integrationpoints(n_points, n_nodes, xi, w)
 
 
@@ -571,6 +571,7 @@
       endif
 
       end subroutine abq_facenodes_2d
+
 
       subroutine abq_inverse_LU(Ain,A_inverse,n)  ! Compute the inverse of an arbitrary matrix by LU decomposition
 

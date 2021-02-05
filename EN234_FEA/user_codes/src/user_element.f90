@@ -181,6 +181,9 @@ subroutine user_element_dynamic(lmn, element_identifier, n_nodes, node_property_
 
 end subroutine user_element_dynamic
 
+
+
+
 subroutine user_element_fieldvariables(lmn, element_identifier, n_nodes, node_property_list, &           ! Input variables
     n_properties, element_properties, n_int_properties, int_element_properties, &                        ! Input variables
     element_coords, length_coord_array, &                                                                ! Input variables
@@ -262,8 +265,6 @@ subroutine user_element_fieldvariables(lmn, element_identifier, n_nodes, node_pr
         '   Current element types are: '/  &
         '     IEP=1001     Basic fully integrated 3D linear elastic element       '/&
         '    Subroutine called with IEP = ', I10)
-
-
 
 end if
 

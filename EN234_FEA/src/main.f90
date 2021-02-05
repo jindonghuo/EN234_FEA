@@ -9,21 +9,21 @@ program en234fea
   character (len=80) :: Eclipse_root_folder
 
   VS_root_folder = 'H:/Repos/EN234_FEA/EN234_FEA/'   ! This should work with Intel Studio on the remote desktop if you follow the instructions for cloning your EN234FEA fork 
-  Eclipse_root_folder = './'   !  This should work with Eclipse
+  Eclipse_root_folder = './'                         !  This should work with Eclipse
 
   VS_root_folder = 'C:/Users/Bower/Source/Repos/EN234_FEA/EN234_FEA/'
   ! root_directory = VS_root_folder
   root_directory = Eclipse_root_folder
-!
+
 !   Homework Assignments 2017
 !   You can test the ABAQUS UEL, UMAT and VUMAT codes that you develop for EN234
 !   by uncommenting the relevant input files listed below.
 !
 !   You will also need to write some code for each assignment:
-!           A user material for a static analysis should be in a subroutine called UMAT( )
+!           A user material for a static analysis  should be in a subroutine called UMAT( )
 !           A user material for a dynamic analysis should be in a subroutine called VUMAT( )
-!           A user element for a static analysis should be in a subroutine called UEL( )
-!           A user element for a dynamic analysis should be in a subroutine called VUEL( )
+!           A user element for  a static analysis  should be in a subroutine called UEL( )
+!           A user element for  a dynamic analysis should be in a subroutine called VUEL( )
 !
 !     ABAQUS has a number of other user subroutines, but those are not duplicated in EN234FEA
 !
@@ -130,7 +130,7 @@ program en234fea
 
    write(6,*) ' Before open the infile ', infil, outfil
 
-   open (unit = IOR, file = trim(infil), status = 'old', ERR=500)
+   open (unit = IOR, file = trim(infil), status = 'old', ERR=500) ! trim is to remove the trailing blank
    open (UNIT = IOW, FILE = trim(outfil), STATUS = 'unknown', ERR=500)
    
    call read_input_file
